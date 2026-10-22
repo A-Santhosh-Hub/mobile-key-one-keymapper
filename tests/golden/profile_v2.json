@@ -1,0 +1,145 @@
+{
+  "id": "def456def456",
+  "version": 2,
+  "name": "Golden V2",
+  "orientation": "landscape",
+  "package": "com.x",
+  "bindings": [
+    {
+      "type": "binding",
+      "id": "reload",
+      "label": "Reload",
+      "triggers": [
+        "R"
+      ],
+      "actions": [
+        {
+          "mode": "tap",
+          "x": 0.7,
+          "y": 0.9
+        }
+      ],
+      "on_failure": "continue"
+    },
+    {
+      "type": "binding",
+      "id": "interact",
+      "label": "Interact",
+      "triggers": [
+        "E",
+        "F",
+        "MMB"
+      ],
+      "actions": [
+        {
+          "mode": "tap",
+          "x": 0.62,
+          "y": 0.55
+        }
+      ],
+      "on_failure": "continue"
+    },
+    {
+      "type": "binding",
+      "id": "fire",
+      "label": "Fire",
+      "triggers": [
+        "LMB"
+      ],
+      "actions": [
+        {
+          "mode": "hold",
+          "x": 0.8,
+          "y": 0.7,
+          "also": [
+            [
+              0.1,
+              0.4
+            ]
+          ]
+        },
+        {
+          "mode": "tap",
+          "x": 0.5,
+          "y": 0.2,
+          "delay_ms": 60
+        },
+        {
+          "mode": "swipe",
+          "x": 0.2,
+          "y": 0.5,
+          "x2": 0.6,
+          "y2": 0.3,
+          "duration_ms": 200,
+          "delay_ms": 120
+        }
+      ],
+      "on_failure": "abort"
+    },
+    {
+      "type": "binding",
+      "id": "menu",
+      "label": "Menu",
+      "triggers": [
+        "Shift+C",
+        "Ctrl+C"
+      ],
+      "actions": [
+        {
+          "mode": "sequence",
+          "x": 0.4,
+          "y": 0.4,
+          "steps": [
+            [
+              0.1,
+              0.1,
+              0
+            ],
+            [
+              0.2,
+              0.2,
+              300
+            ]
+          ]
+        }
+      ],
+      "on_failure": "continue"
+    }
+  ],
+  "sticks": [
+    {
+      "type": "stick",
+      "x": 0.15,
+      "y": 0.7,
+      "radius": 0.09,
+      "keys": {
+        "up": "W",
+        "left": "A",
+        "down": "S",
+        "right": "D"
+      },
+      "ramp_ms": 50,
+      "label": "Move",
+      "sprint_key": "",
+      "sprint_scale": 1.35,
+      "walk_key": "",
+      "walk_scale": 0.5,
+      "autorun_key": ""
+    }
+  ],
+  "looks": [
+    {
+      "type": "look",
+      "x0": 0.5,
+      "y0": 0.2,
+      "x1": 0.9,
+      "y1": 0.8,
+      "sens_x": 1.0,
+      "sens_y": 1.0,
+      "accel": 0.0,
+      "invert_y": false,
+      "label": "Look",
+      "ads_scale": 1.0
+    }
+  ]
+}
